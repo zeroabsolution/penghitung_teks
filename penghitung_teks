@@ -1,0 +1,26 @@
+def hitung_teks():
+    print("=== ANALISIS TEKS SEDERHANA ===")
+    teks = input("Masukkan teks atau kalimat yang ingin dianalisis:\n> ")
+    
+    # Menghitung karakter (termasuk spasi)
+    jumlah_karakter = len(teks)
+    
+    # Menghitung karakter tanpa spasi
+    jumlah_karakter_tanpa_spasi = len(teks.replace(" ", ""))
+    
+    # Menghitung jumlah kata (berdasarkan spasi)
+    kata_list = teks.split()
+    jumlah_kata = len(kata_list)
+    
+    # Estimasi waktu baca (rata-rata orang membaca 200 kata per menit)
+    waktu_baca_detik = round((jumlah_kata / 200) * 60)
+    
+    print("\n--- HASIL ANALISIS ---")
+    print(f"Jumlah Kata         : {jumlah_kata}")
+    print(f"Jumlah Karakter     : {jumlah_karakter} (termasuk spasi)")
+    print(f"Jumlah Karakter     : {jumlah_karakter_tanpa_spasi} (tanpa spasi)")
+    print(f"Estimasi Waktu Baca : sekitar {waktu_baca_detik} detik")
+
+# Menjalankan program
+if __name__ == "__main__":
+    hitung_teks()
